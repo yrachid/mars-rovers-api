@@ -37,9 +37,15 @@ jobs:
 
     - run: pnpm build
 
-    - run: pnpm test
+    - name: TsNode - Timed
+      run: pnpm test:tsnode:timed
 
-    - run: pnpm test:e2e
+    - name: TsNode - GC Trace
+      run: pnpm test:tsnode:gc
 
-    - name: Run CDK memory inspection
-      run: pnpm run-cdk
+    - name: TSC - timed
+      run: pnpm test:tsc:timed
+
+    - name: TSC - GC Trace
+      run: pnpm test:tsc:gc
+
