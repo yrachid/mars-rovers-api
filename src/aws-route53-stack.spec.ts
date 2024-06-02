@@ -3,7 +3,7 @@ import { App, Testing } from 'cdktf';
 import { AwsRoute53Stack } from './aws-route53-stack';
 import assert from 'node:assert/strict';
 
-describe('AwsStack', () => {
+describe('AwsRoute53Stack', () => {
   let tfApp: App;
   let stack: AwsRoute53Stack;
 

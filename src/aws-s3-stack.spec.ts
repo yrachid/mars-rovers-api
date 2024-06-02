@@ -3,7 +3,7 @@ import { App, Testing } from 'cdktf';
 import { AwsS3BucketStack } from './aws-s3-stack';
 import assert from 'node:assert/strict';
 
-describe('AwsStack', () => {
+describe('AwsS3Stack', () => {
   let tfApp: App;
   let stack: AwsS3BucketStack;
 
