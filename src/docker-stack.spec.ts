@@ -15,6 +15,9 @@ describe('CDK DockerStack', () => {
   it('has docker provider', () => {
     const synthed: Record<string, any> = JSON.parse(Testing.synth(stack));
 
-    assert.equal(synthed, { ok: 'abcd' });
+    assert.equal(
+      synthed.resource.docker_container.nginxContainer.name,
+      'nginx-container',
+    );
   });
 });
