@@ -50,5 +50,7 @@ jobs:
       run: pnpm test:tsc:gc
 
     - name: TSC - Failing test (checking if source maps work)
-      run: pnpm test:tsc:failing
+      run: |
+        pnpm test:tsc:failing
+        exit 0
 
