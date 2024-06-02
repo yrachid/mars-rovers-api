@@ -17,7 +17,7 @@ jobs:
       with:
         node-version: 20.13.0
 
-    - uses: pnpm/actions-setup@v4
+    - uses: pnpm/action-setup@v4
       name: Install pnpm
 
     - name: Get pnpm store directory
