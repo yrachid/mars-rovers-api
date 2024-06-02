@@ -1,6 +1,6 @@
 import { App } from 'cdktf';
-import { AwsS3BucketStack } from './aws-s3-stack';
-import { AwsRoute53Stack } from './aws-route53-stack';
+import { AwsS3BucketStack } from './src/aws-s3-stack';
+import { AwsRoute53Stack } from './src/aws-route53-stack';
 
 const app = new App();
 
