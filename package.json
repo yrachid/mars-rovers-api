@@ -9,12 +9,13 @@
     "start:debug": "nest start --debug --watch",
     "start:dev": "nest start --watch",
     "start:prod": "node dist/main",
-    "test": "node --require ts-node/register --test $(find src/ | grep .spec.ts | xargs)",
+    "test": "node --enable-source-maps --require ts-node/register --test $(find src/ | grep .spec.ts | xargs)",
     "test:tsnode:timed": "time node --require ts-node/register --test $(find src/ | grep .spec.ts | xargs)",
     "test:tsnode:gc": "node --trace-gc --require ts-node/register --test $(find src/ | grep .spec.ts | xargs)",
     "test:e2e": "node --require ts-node/register --test $(find test/ | grep .e2e-spec.ts | xargs)",
-    "test:tsc:timed": "time tsc -p tsconfig.test.json && time node --test test-dist/*.spec.js",
-    "test:tsc:gc": "time tsc -p tsconfig.test.json && node --trace-gc --test test-dist/*.spec.js"
+    "test:tsc:timed": "time tsc -p tsconfig.test.json && time node --enable-source-maps --test test-dist/*.spec.js",
+    "test:tsc:gc": "time tsc -p tsconfig.test.json && node --enable-source-maps --trace-gc --test test-dist/*.spec.js",
+    "test:tsc:failing": "tsc -p tsconfig.test.json && node --enable-source-maps --test test-dist/*.failing.test.js"
   },
   "dependencies": {
     "@cdktf/provider-aws": "^19.21.0",

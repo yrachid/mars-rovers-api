@@ -1,5 +1,5 @@
 {
-  "include": ["src/**/*.spec.ts"],
+  "include": ["src/**/*.ts"],
   "compilerOptions": {
     "module": "node16",
     "declaration": true,
@@ -8,7 +8,7 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "target": "ES2021",
-    "sourceMap": true,
+    "inlineSourceMap": true,
     "outDir": "./test-dist",
     "baseUrl": "./",
     "incremental": true,

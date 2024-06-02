@@ -43,9 +43,12 @@ jobs:
     - name: TsNode - GC Trace
       run: pnpm test:tsnode:gc
 
-    - name: TSC - timed
+    - name: TSC - timed (including source-maps)
       run: pnpm test:tsc:timed
 
-    - name: TSC - GC Trace
+    - name: TSC - GC Trace (including source-maps)
       run: pnpm test:tsc:gc
+
+    - name: TSC - Failing test (checking if source maps work)
+      run: pnpm test:tsc:failing
 
