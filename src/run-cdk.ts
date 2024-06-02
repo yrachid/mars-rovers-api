@@ -7,5 +7,11 @@ const app = new App();
 const s3 = new AwsS3BucketStack(app, 'test-s3');
 const r53 = new AwsRoute53Stack(app, 'test-route-53');
 
-console.log(JSON.stringify(s3.toTerraform()));
-console.log(JSON.stringify(r53.toTerraform()));
+const consolidated = {
+  stacks: {
+    s3: s3.toTerraform(),
+    route53: r53.toTerraform(),
+  },
+};
+
+console.log(JSON.stringify(consolidated));
