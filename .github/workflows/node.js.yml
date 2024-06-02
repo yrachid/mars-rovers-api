@@ -21,7 +21,7 @@ jobs:
       name: Install pnpm
 
     - name: Get pnpm store directory
-      shell: branches
+      shell: bash
       run: |
         echo "$STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
