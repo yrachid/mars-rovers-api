@@ -62,5 +62,11 @@ jobs:
         rm -rf dist/
         rm -rf test-dist/
 
+    - name: TSC Only (no extra instrumentation)
+      run: |
+        pnpm test:tsc
+        rm -rf dist/
+        rm -rf test-dist/
+
 
 

@@ -14,7 +14,8 @@
     "test:tsnode:gc": "node --trace-gc --require ts-node/register --test-reporter spec --test $(find src/ | grep .spec.ts | xargs)",
     "test:e2e": "node --require ts-node/register --test-reporter spec --test $(find test/ | grep .e2e-spec.ts | xargs)",
     "test:tsc:timed": "time tsc -p tsconfig.test.json && node --enable-source-maps --test-reporter spec --test test-dist/*.spec.js",
-    "test:tsc:gc": "time tsc -p tsconfig.test.json && node --enable-source-maps --test-reporter spec --trace-gc --test test-dist/*.spec.js"
+    "test:tsc:gc": "time tsc -p tsconfig.test.json && node --enable-source-maps --test-reporter spec --trace-gc --test test-dist/*.spec.js",
+    "test:tsc": "time tsc -p tsconfig.test.json && node --enable-source-maps --test-reporter spec --trace-gc --test test-dist/*.spec.js"
   },
   "dependencies": {
     "@cdktf/provider-aws": "^19.21.0",
