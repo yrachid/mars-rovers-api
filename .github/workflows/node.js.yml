@@ -38,13 +38,22 @@ jobs:
     - run: pnpm build
 
     - name: TsNode - Timed
-      run: pnpm test:tsnode:timed
+      run: |
+        pnpm test:tsnode:timed
+        rm -rf dist/
 
     - name: TsNode - GC Trace
-      run: pnpm test:tsnode:gc
+      run: |
+        pnpm test:tsnode:gc
+        rm -rf dist/
 
     - name: TSC - timed (including source-maps)
-      run: pnpm test:tsc:timed
+      run: |
+        pnpm test:tsc:timed
+        rm -rf dist/
 
     - name: TSC - GC Trace (including source-maps)
-      run: pnpm test:tsc:gc
+      run: |
+        pnpm test:tsc:gc
+        rm -rf dist/
+
